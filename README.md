@@ -1,6 +1,27 @@
 # JAVA maven project
 スッキリわかるサーブレット&JSPを参考にしつつ、サーブレットやJSPについて色々試すリポジトリ
 
+## 環境
+- VSCode: 1.81.1
+- Java: 16.0.1
+- Tomcat: 10.0.14
+- Docker: 20.10.11
+
+## Tomcat操作
+起動
+```bash
+make up
+```
+
+停止
+```bash
+make down
+```
+
+- `localhost:8080/{application-name}`
+- `localhost:8080/{application-name}/{servlet-name}`
+でアクセスできる。
+
 ## Tomcat10からのAPI変更
 Tomcat9までは`javax`パッケージを使用していたが、10からは`jakarta`を使用する必要がある。
 

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tomcat:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./target/web-app.war:/usr/local/tomcat/webapps/web-app.war
+    ports:
+      - "8080:8080"
