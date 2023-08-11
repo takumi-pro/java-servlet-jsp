@@ -1,6 +1,9 @@
 # JAVA maven project
 スッキリわかるサーブレット&JSPを参考にしつつ、サーブレットやJSPについて色々試すリポジトリ
 
+## Manager Appの認証情報設定
+インストールしたTomcatの`conf/tomcat-users.xml`を編集する。
+
 ## サーブレットのマッピング
 これまで`@WebServlet`アノテーションの指定と`web.xml`へのサーブレットタグの指定を両方行っていたが（エラーが起きていた）、アノテーションのみの指定が正しいようだった。
 `src/main/java/com/webapp`配下に以下のようなサーブレットクラスを作成してTomcatで実行→`/web-app/helloservlet`でアクセスできた
