@@ -61,6 +61,18 @@ public class HelloServlet extends HttpServlet {
 }
 ```
 
+## スコープ
+- サーブレットクラスのインスタンスをJSPで利用するにはスコープを使う。
+- 種類
+  - ページスコープ
+  - リクエストスコープ
+  - セッションスコープ
+  - アプリケーションスコープ
+- 保存できるのはインスタンスのみ
+- リクエストスコープを用いることでforward元とforward先でインスタンスの共有が可能になる
+
+
+
 ## 参考
 - [Javaのプロジェクトで使う.gitignore](https://qiita.com/tora470/items/d61c3fcb261e48edc996)
 - [tomcatの設定 web.xmlのURLパターンにクラス名と同じ名前は使えない？](https://teratail.com/questions/122182)
