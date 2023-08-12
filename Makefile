@@ -1,5 +1,11 @@
-up:
-	docker-compose up -d
+tomcat-up:
+	docker-compose -f docker-compose-tomcat.yaml up -d
 
-down:
-	docker-compose down
+tomcat-down:
+	docker-compose -f docker-compose-tomcat.yaml down
+
+db-up:
+	docker-compose -f docker-compose-postgres.yaml up -d
+
+db-down:
+	docker-compose -f docker-compose-postgres.yaml down

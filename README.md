@@ -71,6 +71,17 @@ public class HelloServlet extends HttpServlet {
 - 保存できるのはインスタンスのみ
 - リクエストスコープを用いることでforward元とforward先でインスタンスの共有が可能になる
 
+## DB接続
+- PostgreSQL: 14を使用（Docker）
+
+### JDBCドライバー
+- `pom.xml`に依存関係として設定する
+- `$CATALINA_HOME/lib`にjarファイルを配置する必要があるためコンテナ内にコピーした
+
+### JDBCの接続情報について
+- ローカルでは`host: localhost, port: 5434`で接続できるがJDBCではdocker内の接続情報を指定する必要があるようだ
+- postgresコンテナとtomcatコンテナを通信させる必要があるため、dockerネットワークを作成した
+- `docker network inspect {network name}`で出力されたpostgresのローカルIPアドレスとpostgresのデフォルトポート（5432）を指定して接続できた
 
 
 ## 参考
